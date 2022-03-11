@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#gamebox {
+  position: absolute;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto;
+  -ms-grid-columns: auto auto auto auto;
+      grid-template: auto/auto auto auto auto;
+  grid-gap: 1vmin;
+  margin: 2vmin;
+  padding: 2vmin;
+  background-color: #c4c4c4;
+  border-radius: 2vmin;
+}
+
+#gamebox .case {
+  position: relative;
+  border-radius: 1vmin;
+  width: 10vmin;
+  height: 10vmin;
+  background-color: #686868;
+}
+
+#gamebox .number {
+  color: #fff;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,38 @@
+//colors 
+$background-color : #fff;
+$case-background-color : rgb(104, 104, 104);
+$box-background-color : rgb(196, 196, 196);
+$number-txt-color : #fff;
+
+//sizes
+$box-size : 10vmin;
+
+
+*{
+    margin : 0; 
+    padding : 0;
+    }
+
+#gamebox{
+    position: absolute;
+    display: grid;
+    grid-template: auto/auto auto auto auto;
+    grid-gap: 1vmin;
+    margin: 2vmin;
+    padding: 2vmin;
+    background-color: $box-background-color;
+    border-radius: 2vmin;
+
+    .case{
+        position: relative;
+        border-radius: 1vmin;
+        width: $box-size;
+        height: $box-size;
+        background-color: $case-background-color;
+    }
+    .number{
+        //position number center case 
+
+        color: $number-txt-color;
+    }
+}
