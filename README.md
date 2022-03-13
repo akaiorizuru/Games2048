@@ -109,6 +109,32 @@ div{
     animation-iteration-count: infinite; //loop
 }
 ````
+- animation attribute : 
+    - duration | easing-function | delay |iteration-count | direction | fill-mode | play-state | @keyframe name
+    - @keyframe name | duration | easing-function | delay
+    - @keyframe name | duration
+
+
+````scss
+@keyframes change_colors_scale {
+    100%{
+        background-color : red;
+        scale : 100%;
+    }
+    50%{
+        background-color : yellow;
+        scale : 50%;
+    }
+    0%{
+        background-color : yellow;
+        scale : 0%;
+    }
+    
+}
+div{
+    animation : 3s ease-in 1s 2 reverse both paused change_colors_scale;
+}
+````
 
 ### Files explanation 
 - layout.sass [/sass/layout.sass] is a test file use to find and resolve issue
