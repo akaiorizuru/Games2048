@@ -35,3 +35,29 @@ Why calc($fx) and calc($fy) don't work but $fx and $fy seems to calculate itself
 ````
 
 ==> is it a compile error? 
+
+
+- first solution : 
+    => use **#{$var}** to considerate the variable and not only the number like : 
+```` scss
+    //sizes
+    $case-size : 20vmin;
+    $grid-repeat-number : 4;
+    $gap : 2vmin;
+    $case-border-radius : 1vmin;
+
+    //calc
+    $x : 0; //horizontal case's number 
+    $y : 2; //vertical case's number
+
+    $fx : #{$x} * ( #{$gap} + #{$case-size} ) + #{$gap}; //function position x
+    $fy : #{$y} * (#{$gap} + #{$case-size}) + #{$gap}; // function position y 
+
+        .number{
+            left : calc(#{$fx});
+            top : calc(#{$fy});
+        }
+````
+
+- but another problem : the navigator doesn't considerate the right function, it calculation $fx without considerate the () 
+=> the multiplication apply only on $gap and not $gap + $case-size
