@@ -5,8 +5,7 @@ begin : 2022 March
     - [Grid Template](#grid-template)
     - [Calculate Position](#calculate-position)
     - [Color Changing](#color-changing)
-    - [Animations](#animation)
-        -[Keyframe](#keyframe)
+    - [Keyframes & Animation](#keyframes--animation)
 - [Files explanation](#files-explanation)
 - [Issues](#issues)
     - [Calc() expression issue on scss](#calc-expression-doesnt-work)
@@ -135,6 +134,35 @@ div{
     animation : 3s ease-in 1s 2 reverse both paused change_colors_scale;
 }
 ````
+
+for this project : 
+
+````scss
+@keyframes load-number-animation {
+    from{
+        opacity : 0%;
+        scale : 0;
+    }
+    to{
+        scale: 1;
+    }
+}
+
+.number{
+    animation: load-number-animation 400ms ease;
+}
+````
+
+
+### Transition 
+````scss
+.number{
+    // transition when number case move 
+    transition : 150ms ease-in-out;
+}
+````
+
+
 
 ### Files explanation 
 - layout.sass [/sass/layout.sass] is a test file use to find and resolve issue

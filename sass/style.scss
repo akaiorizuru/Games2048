@@ -29,6 +29,21 @@ $fx : #{$x} * calc( #{$gap} + #{$case-size} ) + #{$gap}; //function position x
 $fy : #{$y} * calc(#{$gap} + #{$case-size}) + #{$gap}; // function position y 
 
 
+//@mixin
+
+
+//@keyframe
+@keyframes load-number-animation {
+    from{
+        opacity : 0%;
+        scale : 0;
+    }
+    to{
+        scale: 1;
+    }
+}
+
+
 
 
 *, *::before, *::after{
@@ -81,6 +96,12 @@ body{
             color: hsl($number-color-hue, $number-color-saturation, $number-txt-lightness);
             background-color: hsl($number-color-hue, $number-color-saturation, $number-background-lightness);
             
+
+            //animation
+            animation: load-number-animation 400ms ease;
+
+            // transition when number case move 
+            transition : 150ms ease-in-out;
         }
     }
 }
