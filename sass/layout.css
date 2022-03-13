@@ -1,0 +1,25 @@
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #2b2b2b;
+}
+
+body #game-box {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (20vmin)[4];
+      grid-template-columns: repeat(4, 20vmin);
+  -ms-grid-rows: (20vmin)[4];
+      grid-template-rows: repeat(4, 20vmin);
+  gap: 2vmin;
+  background-color: #c4c4c4;
+}
+
+body #game-box .case {
+  background-color: #686868;
+  border-radius: 2vmin;
+}
+/*# sourceMappingURL=layout.css.map */

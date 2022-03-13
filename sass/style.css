@@ -1,31 +1,60 @@
-* {
-  margin: 0;
-  padding: 0;
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #2b2b2b;
 }
 
-#gamebox {
-  position: absolute;
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-size: 7vmin;
+}
+
+body #game-box {
+  position: relative;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: auto;
-  -ms-grid-columns: auto auto auto auto;
-      grid-template: auto/auto auto auto auto;
-  grid-gap: 1vmin;
+  -ms-grid-columns: (20vmin)[4];
+      grid-template-columns: repeat(4, 20vmin);
+  -ms-grid-rows: (20vmin)[4];
+      grid-template-rows: repeat(4, 20vmin);
+  grid-gap: 2vmin;
   margin: 2vmin;
   padding: 2vmin;
   background-color: #c4c4c4;
   border-radius: 2vmin;
 }
 
-#gamebox .case {
-  position: relative;
+body #game-box .case {
   border-radius: 1vmin;
-  width: 10vmin;
-  height: 10vmin;
   background-color: #686868;
 }
 
-#gamebox .number {
-  color: #fff;
+body #game-box .number {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 20vmin;
+  width: 20vmin;
+  background-color: red;
+  border-radius: 1vmin;
+  left: 68vmin;
+  top: 46vmin;
 }
 /*# sourceMappingURL=style.css.map */

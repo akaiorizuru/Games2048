@@ -1,0 +1,34 @@
+//Css Error Testing file
+
+
+
+//colors 
+$background-color : rgb(43, 43, 43);
+$case-background-color : rgb(104, 104, 104);
+$box-background-color : rgb(196, 196, 196);
+$number-txt-color : #fff;
+
+//sizes
+$box-size : 20vmin;
+
+
+*, *::before,*::after{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: $background-color;
+    
+    #game-box{
+        display: grid;
+        grid-template-columns: repeat(4, $box-size);
+        grid-template-rows: repeat(4, $box-size);
+        gap: 2vmin;
+        background-color: $box-background-color;
+
+        .case{
+            background-color: $case-background-color;
+            border-radius: 2vmin;
+        }
+    }
+}
