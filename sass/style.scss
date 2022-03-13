@@ -15,8 +15,8 @@ $case-border-radius : 1vmin;
 $x : 3; //horizontal case's number 
 $y : 2; //vertical case's number
 
-$fx : #{$x} * ( #{$gap} + #{$case-size} ) + #{$gap}; //function position x
-$fy : #{$y} * (#{$gap} + #{$case-size}) + #{$gap}; // function position y 
+$fx : #{$x} * calc( #{$gap} + #{$case-size} ) + #{$gap}; //function position x
+$fy : #{$y} * calc(#{$gap} + #{$case-size}) + #{$gap}; // function position y 
 
 
 

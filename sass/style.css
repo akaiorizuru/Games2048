@@ -54,7 +54,7 @@ body #game-box .number {
   width: 20vmin;
   background-color: red;
   border-radius: 1vmin;
-  left: calc( 3 * 2vmin + 20vmin + 2vmin);
-  top: calc( 2 * 2vmin + 20vmin + 2vmin);
+  left: calc( 3 * calc( 2vmin + 20vmin) + 2vmin);
+  top: calc( 2 * calc(2vmin + 20vmin) + 2vmin);
 }
 /*# sourceMappingURL=style.css.map */

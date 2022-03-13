@@ -38,7 +38,7 @@ Why calc($fx) and calc($fy) don't work but $fx and $fy seems to calculate itself
 
 
 - first solution : 
-    => use **#{$var}** to considerate the variable and not only the number like : 
+    => use **(Interpolation)[https://sass-lang.com/documentation/interpolation]** : **#{$var}** to considerate the variable and not only the number like : 
 ```` scss
     //sizes
     $case-size : 20vmin;
@@ -61,3 +61,14 @@ Why calc($fx) and calc($fy) don't work but $fx and $fy seems to calculate itself
 
 - but another problem : the navigator doesn't considerate the right function, it calculation $fx without considerate the () 
 => the multiplication apply only on $gap and not $gap + $case-size
+
+- Solution to the second issue : 
+````scss
+    $fx : #{$x} * calc( #{$gap} + #{$case-size} ) + #{$gap}; //function position x
+    $fy : #{$y} * calc(#{$gap} + #{$case-size}) + #{$gap}; // function position y 
+````
+or 
+````scss
+    $fx : #{$x} * #{$gap} + #{$x} #{$case-size}  + #{$gap}; //function position x
+    $fy : #{$y} * #{$gap} + #{$y} * #{$case-size} + #{$gap}; // function position y 
+````
