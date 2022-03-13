@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap");
 *, *::before, *::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -16,6 +17,7 @@ body {
           align-items: center;
   height: 100vh;
   margin: 0;
+  font-family: 'Fredoka', sans-serif;
   font-size: 7vmin;
 }
 
@@ -52,9 +54,11 @@ body #game-box .number {
           align-items: center;
   height: 20vmin;
   width: 20vmin;
-  background-color: red;
   border-radius: 1vmin;
-  left: calc( 3 * calc( 2vmin + 20vmin) + 2vmin);
-  top: calc( 2 * calc(2vmin + 20vmin) + 2vmin);
+  font-weight: 500;
+  left: calc( 2 * calc( 2vmin + 20vmin) + 2vmin);
+  top: calc( 1 * calc(2vmin + 20vmin) + 2vmin);
+  color: #9bfdf0;
+  background-color: #026457;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,9 +1,19 @@
+//imports 
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap');
+
+
 //colors 
 $background-color : rgb(43, 43, 43);
 $case-background-color : rgb(104, 104, 104);
 $box-background-color : rgb(196, 196, 196);
-$number-background-color : rgb(255, 0, 0);
-$number-txt-color : #fff;
+
+//color lightness
+$number-background-lightness : 20%;
+$number-txt-lightness : 80%;
+
+//number color hue & saturation
+$number-color-hue : 172;
+$number-color-saturation : 96%;
 
 //sizes
 $case-size : 20vmin;
@@ -12,8 +22,8 @@ $gap : 2vmin;
 $case-border-radius : 1vmin;
 
 //calc
-$x : 3; //horizontal case's number 
-$y : 2; //vertical case's number
+$x : 2; //horizontal case's number 
+$y : 1; //vertical case's number
 
 $fx : #{$x} * calc( #{$gap} + #{$case-size} ) + #{$gap}; //function position x
 $fy : #{$y} * calc(#{$gap} + #{$case-size}) + #{$gap}; // function position y 
@@ -33,12 +43,12 @@ body{
     align-items: center;
     height: 100vh;
     margin : 0; 
+    font-family:'Fredoka', sans-serif;
     font-size: 7vmin;
     
     #game-box{
         position: relative;
         display: grid;
-        // grid-template: auto/auto auto auto auto;
         //repeat $grid-repeat-number (4) times $box-size
         grid-template-columns: repeat($grid-repeat-number, $case-size);
         grid-template-rows: repeat($grid-repeat-number, $case-size);
@@ -49,7 +59,6 @@ body{
         border-radius: 2vmin;
 
         .case{
-            // position: relative;
             border-radius: $case-border-radius;
             background-color: $case-background-color;
         }
@@ -61,14 +70,17 @@ body{
             align-items: center;
             height: $case-size;
             width: $case-size;
-            background-color: $number-background-color;
             border-radius: $case-border-radius;
-            // color: $number-txt-color;
-
+            font-weight: 500; // the import font 'fredoka' has different weight, 500 correspond to his medium weight
+            
             //calc position number
-            // // strange calc($fx) and calc($fy) doesn't work but the calculation work itself without "calc()" expression
             left : calc( #{$fx} );
             top : calc( #{$fy} );
+
+            // calc color
+            color: hsl($number-color-hue, $number-color-saturation, $number-txt-lightness);
+            background-color: hsl($number-color-hue, $number-color-saturation, $number-background-lightness);
+            
         }
     }
 }
