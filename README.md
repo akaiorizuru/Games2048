@@ -1,19 +1,27 @@
-## Game project 
+# Game project 
 begin : 2022 March 
 
-- [Key Idea & Key Element](#key-idea--key-element)
-    - [Grid Template](#grid-template)
-    - [Calculate Position](#calculate-position)
-    - [Color Changing](#color-changing)
-    - [Keyframes & Animation](#keyframes--animation)
 - [Files explanation](#files-explanation)
-- [Issues](#issues)
-    - [Calc() expression issue on scss](#calc-expression-doesnt-work)
-        - [calc() issue's solution](#solution-at-calc-expression-problem-on-scss)
-    - [Calc & Multiplication issue on scss](#calc-multiplication-problem-on-scss)
-        - [Calc & multiplication issue's solution](#solution-to-the-second-issue)
+- [SCSS](#scss)
+    - [Key Idea & Key Element](#key-idea--key-element)
+        - [Grid Template](#grid-template)
+        - [Calculate Position](#calculate-position)
+        - [Color Changing](#color-changing)
+        - [Keyframes & Animation](#keyframes--animation)
+    - [Issues](#issues)
+        - [Calc() expression issue on scss](#calc-expression-doesnt-work)
+            - [calc() issue's solution](#solution-at-calc-expression-problem-on-scss)
+        - [Calc & Multiplication issue on scss](#calc-multiplication-problem-on-scss)
+            - [Calc & multiplication issue's solution](#solution-to-the-second-issue)
+- [js](#js)
 
 
+# Files explanation 
+- [layout.sass](/sass/layout.sass) is a test file use to find and resolve issue
+- [grid.js](/js/grid.js) import to [script.js](/js/script.js)
+
+
+# SCSS 
 ## Key Idea & Key Element
 
 ### Grid template 
@@ -164,8 +172,6 @@ for this project :
 
 
 
-### Files explanation 
-- layout.sass [/sass/layout.sass] is a test file use to find and resolve issue
 
 
 ### Issues 
@@ -234,3 +240,7 @@ or
     $fx : #{$x} * #{$gap} + #{$x} #{$case-size}  + #{$gap}; //function position x
     $fy : #{$y} * #{$gap} + #{$y} * #{$case-size} + #{$gap}; // function position y 
 ````
+
+
+
+# js 

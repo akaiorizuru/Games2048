@@ -75,13 +75,18 @@ body #game-box .number {
   width: 20vmin;
   border-radius: 1vmin;
   font-weight: 500;
-  left: calc( 2 * calc( 2vmin + 20vmin) + 2vmin);
-  top: calc( 1 * calc(2vmin + 20vmin) + 2vmin);
+  left: calc( 1 * calc( 2vmin + 20vmin) + 2vmin);
+  top: calc( 3 * calc(2vmin + 20vmin) + 2vmin);
   color: #9bfdf0;
   background-color: #026457;
   -webkit-animation: load-number-animation 400ms ease;
           animation: load-number-animation 400ms ease;
   -webkit-transition: 150ms ease-in-out;
   transition: 150ms ease-in-out;
+}
+
+:export {
+  x: 1;
+  y: 3;
 }
 /*# sourceMappingURL=style.css.map */
