@@ -13,6 +13,7 @@ begin : 2022 March
             - [calc() issue's solution](#solution-at-calc-expression-problem-on-scss)
         - [Calc & Multiplication issue on scss](#calc-multiplication-problem-on-scss)
             - [Calc & multiplication issue's solution](#solution-to-the-second-issue)
+        - [How to allow CSS file to have SCSS variables?](#how-to-allow-css-file-to-have-scss-variables)
 - [js](#js)
 
 
@@ -242,5 +243,13 @@ or
 ````
 
 
+#### How to allow CSS file to have SCSS variables?
+with @use "sass:meta" ? 
+with @mixin and @function & @return? 
+with @root? 
 
 # js 
+
+## [grid file](/js/grid.js)
+Make the container by js and not html in order to control and modify its easier after 
+- define the variable on grid.js : case-size, grid-repeat-number, gap

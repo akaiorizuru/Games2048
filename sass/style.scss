@@ -110,4 +110,16 @@ body{
 :export {
     x : $x;
     y : $y;
+
+    //grid constructor var 
+    case-size : $case-size;
+    grid-repeat-number : $grid-repeat-number;
+    gap : $gap;
 }
+
+// //how to allow CSS file to have SCSS variables? 
+// :root{
+//     --case-size : #{$case-size}; 
+//     --grid-repeat-number : #{$grid-repeat-number}; 
+//     --gap : #{$gap}; 
+// }

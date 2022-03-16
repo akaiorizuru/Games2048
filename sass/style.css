@@ -88,5 +88,8 @@ body #game-box .number {
 :export {
   x: 1;
   y: 3;
+  case-size: 20vmin;
+  grid-repeat-number: 4;
+  gap: 2vmin;
 }
 /*# sourceMappingURL=style.css.map */
