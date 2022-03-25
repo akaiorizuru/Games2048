@@ -44,13 +44,13 @@ body #game-box {
   position: relative;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (20vmin)[4];
-      grid-template-columns: repeat(4, 20vmin);
-  -ms-grid-rows: (20vmin)[4];
-      grid-template-rows: repeat(4, 20vmin);
-  grid-gap: 2vmin;
-  margin: 2vmin;
-  padding: 2vmin;
+  -ms-grid-columns: (var(--case-size))[var(--grid-repeat-number)];
+      grid-template-columns: repeat(var(--grid-repeat-number), var(--case-size));
+  -ms-grid-rows: (var(--case-size))[var(--grid-repeat-number)];
+      grid-template-rows: repeat(var(--grid-repeat-number), var(--case-size));
+  grid-gap: var(--gap);
+  margin: var(--gap);
+  padding: var(--gap);
   background-color: #c4c4c4;
   border-radius: 2vmin;
 }
@@ -71,12 +71,12 @@ body #game-box .number {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 20vmin;
-  width: 20vmin;
+  height: var(--case-size);
+  width: var(--case-size);
   border-radius: 1vmin;
   font-weight: 500;
-  left: calc( 1 * calc( 2vmin + 20vmin) + 2vmin);
-  top: calc( 3 * calc(2vmin + 20vmin) + 2vmin);
+  left: calc( var(--x) * calc( var(--gap) + var(--case-size) + var(--gap)));
+  top: calc( var(--y) * calc( var(--gap) + var(--case-size) + var(--gap)));
   color: #9bfdf0;
   background-color: #026457;
   -webkit-animation: load-number-animation 400ms ease;
@@ -85,11 +85,20 @@ body #game-box .number {
   transition: 150ms ease-in-out;
 }
 
-:export {
+/* :export {
   x: 1;
   y: 3;
   case-size: 20vmin;
   grid-repeat-number: 4;
   gap: 2vmin;
-}
+} */
+
 /*# sourceMappingURL=style.css.map */
+ :root{
+     --case-size : 20vmin; 
+     --grid-repeat-number : 4; 
+     --gap : 2vmin; 
+
+     --x :1;
+     --y :3;
+ }
